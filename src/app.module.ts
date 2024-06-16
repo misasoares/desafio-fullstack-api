@@ -9,9 +9,10 @@ import { JwtAuthGuard } from './auth/guards/jwt-auth.guard';
 import { CustomResponseInterceptor } from './shared/response/custom-response.interceptor';
 import { CustomExceptionFilter } from './shared/response/exceptions/custom-exception';
 import { ClassValidatorPipe } from './shared/pipes/vaidation.pipe';
+import { EmblemsModule } from './emblems/emblems.module';
 
 @Module({
-  imports: [PrismaModule, UserModule, AuthModule],
+  imports: [PrismaModule, UserModule, AuthModule, EmblemsModule],
   controllers: [AppController],
   providers: [
     AppService,
