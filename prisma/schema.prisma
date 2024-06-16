@@ -23,5 +23,24 @@ model User {
 
   nickname String @unique
 
+  emblems Emblems[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
   @@map("user")
+}
+
+model Emblems {
+  id    Int    @id @default(autoincrement())
+  slug  String
+  name  String
+  image String
+
+  users User[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("emblems")
 }
