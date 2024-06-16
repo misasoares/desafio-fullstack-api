@@ -14,7 +14,11 @@ export class UserService {
 
     const createdUser = await this.prisma.user.create({ data });
 
-    return { ...createdUser, password: undefined };
+    return {
+      ...createdUser,
+      password: undefined,
+      message: 'Usuário criado com sucesso.',
+    };
   }
 
   findAll() {
