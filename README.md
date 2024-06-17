@@ -37,6 +37,7 @@ Execute o seguinte comando para instalar as dependências do projeto:
 npm install
 
 Após a instalação das dependências, inicie a API com o comando:
+npm run db seed - para popular o banco de dados com os emblemas
 npm run start:dev 
 
 A API estará disponível em http://localhost:3000.
