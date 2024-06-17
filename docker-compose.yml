@@ -6,7 +6,7 @@ services:
     container_name: desafio_fullstack
     environment:
       POSTGRES_USER: desafio
-      POSTGRES_PASSWORD: fullstacck
+      POSTGRES_PASSWORD: fullstack
       POSTGRES_DB: misasoares
     ports:
       - '5432:5432'
