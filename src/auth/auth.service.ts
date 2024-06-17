@@ -18,6 +18,7 @@ export class AuthService {
       sub: user.id,
       email: user.email,
       name: user.name,
+      emblems: user.emblems,
     };
 
     const jwtToken = this.jwtService.sign(payload);
@@ -26,6 +27,7 @@ export class AuthService {
       access_token: jwtToken,
       id: user.id,
       name: user.name,
+      emblems: user.emblems,
     };
   }
 
